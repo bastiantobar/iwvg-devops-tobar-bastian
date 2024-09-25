@@ -6,12 +6,15 @@ public class User {
     private String id;
     private String name;
     private String familyName;
+    private List<Fraction> fractions;
     public User() {
+        this.fractions = new ArrayList<>();
     }
-    public User(String id, String name, String familyName) {
+    public User(String id, String name, String familyName, List<Fraction> fractions) {
         this.id = id;
         this.name = name;
         this.familyName = familyName;
+        this.fractions = fractions;
     }
     public String getId() {
         return id;
@@ -34,12 +37,22 @@ public class User {
     public String initials() {
         return this.name.substring(0, 1) + ".";
     }
+    public List<Fraction> getFractions() {
+        return fractions;
+    }
+    public void setFractions(List<Fraction> fractions) {
+        this.fractions = fractions;
+    }
+    public void addFraction(Fraction fraction) {
+        this.fractions.add(fraction);
+    }
     @Override
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", familyName='" + familyName + '\'' +
+                ", fractions=" + fractions +
                 '}';
     }
 }
