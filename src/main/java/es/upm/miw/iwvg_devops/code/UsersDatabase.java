@@ -34,6 +34,7 @@ public class UsersDatabase {
             new Fraction(1, 0),
             new Fraction(1, 1)
     );
+
     public Stream<User> findAll() {
         return Stream.of(
                 new User("1", "Oscar", "Mori", fractions1),

@@ -56,4 +56,11 @@ public class FractionTest {
         assertEquals(6,fraction.getNumerator());
         assertEquals(6,fraction.getDenominator());
     }
+    @Test
+    void testAddition(){
+        Fraction testFraction = new Fraction(3,6);
+        fraction.add(testFraction);
+        assertEquals(12,fraction.getNumerator());
+        assertEquals(12,fraction.getDenominator());
+    }
 }
