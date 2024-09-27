@@ -25,5 +25,15 @@ class SearchesTest {
         assertEquals(expectedInitials, familyNameInitials);
     }
 
+    @Test
+    void findUserFamilyNameInitialBySomeProperFraction() {
+        List<String> familyNameInitials = searches.findUserFamilyNameInitialBySomeProperFraction().toList();
+
+        List<String> expectedInitials = List.of("M.", "M.", "T.", "T.");
+
+
+        assertEquals(expectedInitials, familyNameInitials);
+    }
+
 
 }
