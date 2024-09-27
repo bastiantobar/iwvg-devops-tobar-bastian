@@ -49,7 +49,7 @@ class SearchesTest {
 
         List<Double> decimalImproperFractions = searches.findDecimalImproperFractionByUserName("William").toList();
 
-        List<Double> expectedFractions = List.of();
+        List<Double> expectedFractions = List.of(0.2, -0.5, 0.5);
 
         assertEquals(expectedFractions, decimalImproperFractions);
     }
