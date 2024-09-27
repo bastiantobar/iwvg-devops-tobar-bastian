@@ -44,4 +44,14 @@ class SearchesTest {
 
         assertEquals(expectedInitials, fractionByNegativeInitials);
     }
+    @Test
+    void findDecimalImproperFractionByUserName() {
+
+        List<Double> decimalImproperFractions = searches.findDecimalImproperFractionByUserName("William").toList();
+
+        List<Double> expectedFractions = List.of();
+
+        assertEquals(expectedFractions, decimalImproperFractions);
+    }
+
 }
