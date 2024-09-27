@@ -35,5 +35,13 @@ class SearchesTest {
         assertEquals(expectedInitials, familyNameInitials);
     }
 
+    @Test
+    void findDecimalFractionByNegativeSignFraction() {
+        List<Double> fractionByNegativeInitials = searches.findDecimalFractionByNegativeSignFraction().toList();
 
+        List<Double> expectedInitials = List.of(-0.2, -0.5);
+
+
+        assertEquals(expectedInitials, fractionByNegativeInitials);
+    }
 }

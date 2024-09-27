@@ -15,5 +15,12 @@ public class Searches {
                 .map(user-> user.getFamilyName().charAt(0) + "." );
     }
 
-
+    public Stream<Double> findDecimalFractionByNegativeSignFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(fraction -> fraction.decimal() < 0))
+                .flatMap(user -> user.getFractions().stream())
+                .filter(fraction->fraction.decimal()<0)
+                .map(Fraction::decimal);
+    }
 }
