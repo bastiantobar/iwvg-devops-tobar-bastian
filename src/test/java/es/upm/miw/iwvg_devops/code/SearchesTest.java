@@ -18,11 +18,11 @@ class SearchesTest {
     @Test
     void findUserIdBySomeProperFraction() {
 
-        List<String> familyNameInitials = searches.findUserIdBySomeProperFraction().toList();
+        List<String> userInitials = searches.findUserIdBySomeProperFraction().toList();
 
         List<String> expectedInitials = List.of("1", "2", "3", "5");
 
-        assertEquals(expectedInitials, familyNameInitials);
+        assertEquals(expectedInitials, userInitials);
     }
 
 
