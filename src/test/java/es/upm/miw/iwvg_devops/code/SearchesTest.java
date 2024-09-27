@@ -25,5 +25,23 @@ class SearchesTest {
         assertEquals(expectedInitials, userInitials);
     }
 
+    @Test
+    void findUserFamilyNameInitialBySomeProperFraction() {
+        List<String> familyNameInitials = searches.findUserFamilyNameInitialBySomeProperFraction().toList();
 
+        List<String> expectedInitials = List.of("M.", "M.", "T.", "T.");
+
+
+        assertEquals(expectedInitials, familyNameInitials);
+    }
+
+    @Test
+    void findDecimalFractionByNegativeSignFraction() {
+        List<Double> fractionByNegativeInitials = searches.findDecimalFractionByNegativeSignFraction().toList();
+
+        List<Double> expectedInitials = List.of(-0.2, -0.5);
+
+
+        assertEquals(expectedInitials, fractionByNegativeInitials);
+    }
 }
