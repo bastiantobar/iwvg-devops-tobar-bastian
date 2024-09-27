@@ -18,11 +18,11 @@ class SearchesTest {
     @Test
     void findUserIdBySomeProperFraction() {
 
-        List<String> familyNameInitials = searches.findUserIdBySomeProperFraction().toList();
+        List<String> userInitials = searches.findUserIdBySomeProperFraction().toList();
 
         List<String> expectedInitials = List.of("1", "2", "3", "5");
 
-        assertEquals(expectedInitials, familyNameInitials);
+        assertEquals(expectedInitials, userInitials);
     }
 
     @Test
@@ -44,4 +44,14 @@ class SearchesTest {
 
         assertEquals(expectedInitials, fractionByNegativeInitials);
     }
+    @Test
+    void findDecimalImproperFractionByUserName() {
+
+        List<Double> decimalImproperFractions = searches.findDecimalImproperFractionByUserName("William").toList();
+
+        List<Double> expectedFractions = List.of(0.2, -0.5, 0.5);
+
+        assertEquals(expectedFractions, decimalImproperFractions);
+    }
+
 }
